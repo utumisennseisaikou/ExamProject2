@@ -44,4 +44,5 @@ public abstract class Character implements Creature {
         System.out.println(getName()+"は死んでしまった!");
     }
 
+
 }
