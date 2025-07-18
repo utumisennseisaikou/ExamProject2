@@ -12,16 +12,16 @@ public abstract class Weapon {
     String getName(){
         return name;
     }
-    int getDamage(){
+     public int getDamage(){
         return damage;
     }
-    void setDamage(int damage){
+    public void setDamage(int damage){
         this.damage = damage;
     }
-    int getCost(){
+   public  int getCost(){
         return cost;
     }
-    void setCost(int cost){
+    public void setCost(int cost){
         this.cost = cost;
 
     }
