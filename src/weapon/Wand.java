@@ -1,0 +1,10 @@
+package weapon;
+
+public class Wand extends Weapon{
+    public Wand(String name,int damage) {
+        super("魔法の杖",15);
+    }
+    public String attackMessage(){
+        return "から魔法を放った!";
+    }
+}
