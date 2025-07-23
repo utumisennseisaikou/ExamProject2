@@ -9,7 +9,7 @@ public abstract class Weapon {
         this.damage = damage;
     }
      public abstract String attackMessage();
-    String getName(){
+    public String getName(){
         return name;
     }
      public int getDamage(){
@@ -25,4 +25,5 @@ public abstract class Weapon {
         this.cost = cost;
 
     }
+
 }

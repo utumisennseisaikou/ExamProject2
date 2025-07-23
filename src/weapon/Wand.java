@@ -1,7 +1,7 @@
 package weapon;
 
 public class Wand extends Weapon{
-    public Wand(String name,int damage) {
+    public Wand() {
         super("魔法の杖",15);
     }
     public String attackMessage(){

@@ -1,7 +1,7 @@
 package weapon;
 
 public class Sword extends Weapon{
-    Sword(String name,int damage){
+    public Sword(){
         super("剣",10);
     }
     public String attackMessage(){

@@ -9,14 +9,18 @@ import creature.monster.Goblin;
 import creature.monster.Slime;
 import creature.Character;
 import java.util.ArrayList;
-import weapon.Weapon;
+
+import weapon.Dagger;
+import weapon.Sword;
+import weapon.Wand;
+
 public class GameMaster {
     public static void main(String[] args) {
 
         ArrayList<Character> party = new ArrayList<Character>();
-        Hero hero = new Hero("勇者", 100, "剣");
-        Wizard wizard = new Wizard("魔法使い", 60, 20,"魔法の杖");
-        Thief thief = new Thief("盗賊", 70,"短剣");
+        Hero hero = new Hero("勇者", 100,new Sword());
+        Wizard wizard = new Wizard("魔法使い", 60, 20,new Wand());
+        Thief thief = new Thief("盗賊", 70,new Dagger());
         party.add(hero);
         party.add(wizard);
         party.add(thief);
@@ -25,6 +29,9 @@ public class GameMaster {
             member.showStatus();
         }
         ArrayList<Monster> monsters = new ArrayList<Monster>();
+        for (int i = 0; i<5; i++){
+
+        }
         Matango matango = new Matango('A', 45);
         Goblin goblin = new Goblin('A', 50);
         Slime slime = new Slime('A', 40);

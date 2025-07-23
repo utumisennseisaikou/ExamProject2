@@ -18,12 +18,15 @@ public class Wizard extends Character {
             System.out.println("MPが足りない");
         } else {
             target.setHp(target.getHp() - getWeapon().getDamage());
-            System.out.println(getWeapon() + getWeapon().attackMessage());
+            System.out.println(getWeapon().getName() + getWeapon().attackMessage());
         }
     }
 
     public void attack(Creature target) {
         System.out.println(getName() + "は石を投げた!" + target.getName() + "に3のダメージを与えた!");
         target.setHp(target.getHp() - 3);
+    }
+    public void showStatus(){
+        System.out.println(this.getName()+":HP "+ this.getHp() +" mp:" + mp);
     }
 }

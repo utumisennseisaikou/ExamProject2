@@ -11,19 +11,19 @@ public class Thief extends Character {
 
 
     public void attack(Creature target){
-        System.out.println(getName() + "は素早く攻撃した!" + target.getName() + "に5のダメージを与えた!");
+        System.out.println(getName() + "は素早く2回攻撃した!" + target.getName() + "に5のダメージを与えた!");
         target.setHp(target.getHp() - (getWeapon().getDamage()*2));
-        System.out.println("素早く2回攻撃した!");
-        System.out.println(getWeapon()+getWeapon().attackMessage());
+        System.out.println(getWeapon().getName()+getWeapon().attackMessage());
     }
-    public void guard(){
-        setGuard(true);
+    public void guard() {
+        guard = true;
     }
-    public boolean getGuard() {
-        return guard;
+    public void setHp(int hp ){
+        if(true == guard) {
+            System.out.println("しかし、" + getName() + "は攻撃を回避し、ダメージが入らなかった");
+            guard = false;
+        }else{
+            super.setHp(hp);
+        }
     }
-    public void setGuard(boolean guard) {
-        this.guard = guard;
-    }
-
 }
