@@ -12,13 +12,13 @@ public class Wizard extends Character {
 
     }
 
-    public void magic(Creature target) {
+    public void magicattack(Creature target) {
         this.mp -= getWeapon().getCost();
         if (this.mp == 0) {
             System.out.println("MPが足りない");
         } else {
             target.setHp(target.getHp() - getWeapon().getDamage());
-            System.out.println(getWeapon().getName() + getWeapon().attackMessage());
+            System.out.println(getName()+"は"+getWeapon().getName() + getWeapon().attackMessage()+target.getName()+"に１５のダメージを与えた!");
         }
     }
 
